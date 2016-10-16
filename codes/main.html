@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+<script src="https://code.jquery.com/jquery-3.1.0.slim.min.js" integrity="sha256-cRpWjoSOw5KcyIOaZNo4i6fZ9tKPhYYb6i5T9RSVJG8=" crossorigin="anonymous"></script>
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+<script src="http://underscorejs.org/underscore-min.js"></script>
+
+<style type="text/css">
+  .table td { text-align: center; }
+</style>
+
+</head>
+<body>
+
+<script src="./js/utils.js"></script>
+<script src="./js/global.js"></script>
+<script src="./js/local.js"></script>
+<script src="./js/blosum.js"></script>
+<script src="./js/longest-common-subsequence.js"></script>
+
+<script type="text/javascript">
+
+  function compare(value) {
+    ["myDIV","divTable"].forEach(function (element) {
+      var myNode = document.getElementById(element);
+      while (myNode.firstChild) {
+          myNode.removeChild(myNode.firstChild);
+      }
+    });
+
+    var str1     = document.getElementById("seq1").value;
+    var str2     = document.getElementById("seq2").value;
+    var gap      = parseInt(document.getElementById("gap").value);
+    var match    = parseInt(document.getElementById("match").value);
+    var mismatch = parseInt(document.getElementById("mismatch").value);
+
+    if (value == 'global'){
+      global_alignment(str1, str2, 
+        gap, match, mismatch, 
+        "divTable","myDIV");
+    }
+    else if (value == 'local'){
+      local_alignment(str1, str2, 
+        gap, match, mismatch, 
+        "divTable","myDIV");
+    } 
+    else if (value == 'blosum'){
+      seqs = $('#blosum').val().split('\n');
+      blosum(str1, str2, "myDIV", seqs);
+    }
+    else if (value == 'shortestSuperSequence'){
+      shortestSuperSequence(str1, str2, 'myDIV', "divTable");
+    }
+  }
+
+</script>
+
+
+<div class="container-fluid">
+
+Sequencia 1: <input type="text" id="seq1" value="TACTGTTAGT"><br>
+Sequencia 2: <input type="text" id="seq2" value="TCTAT"><br>
+Blosum62: <textarea id="blosum" rows="4" cols="50">M-QPIALLLG
+M-LR-ALL-G
+M-K-IALLLG
+MWPPVA--LG</textarea> <br>
+<table>
+  <tr>
+    <td>match: </td>
+    <td>mismatch: </td>
+    <td>gap: </td>
+  </tr>
+  <tr>
+    <td><input type="text" id="match"     value="1"></td>
+    <td><input type="text" id="mismatch"  value="-1"></td>
+    <td><input type="text" id="gap"       value="-2"></td>
+  </tr>
+</table>
+<br>
+  <button type="button" onclick="compare('global')">Global</button> 
+  <button type="button" onclick="compare('local')">Local</button> 
+  <button type="button" onclick="compare('blosum')">Blosum62</button> 
+  <button type="button" onclick="compare('shortestSuperSequence')">shortestSuperSequence</button> 
+<br><br>
+<div id="myDIV" style="width:60%;"></div>
+<div id="divTable" style="width:60%;"></div>
+
+
+
+</div>
+
+</body>
+</html>
