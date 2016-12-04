@@ -1,0 +1,2972 @@
+MO640/MC668
+Guilherme P. Telles
+IC-Unicamp
+
+Biologia Molecular Computacional
+
+Guilherme P. Telles
+
+1 / 59
+
+Avisado está
+
+Estes slides são incompletos.
+Estes slides contêm erros.
+
+Biologia Molecular Computacional
+
+Guilherme P. Telles
+
+2 / 59
+
+Parte I
+Montagem de fragmentos de DNA
+
+Montagem de fragmentos de DNA
+
+Guilherme P. Telles
+
+3 / 59
+
+Seqüenciamento de DNA
+
+Conhecer as cadeias do DNA permite muitas análises biológicas.
+
+Montagem de fragmentos de DNA
+
+Guilherme P. Telles
+
+4 / 59
+
+Seqüenciamento de DNA
+
+Conhecer as cadeias do DNA permite muitas análises biológicas.
+Seqüenciamento de DNA são técnicas que permitem obter a
+seqüenciar de moléculas de DNA.
+
+Montagem de fragmentos de DNA
+
+Guilherme P. Telles
+
+4 / 59
+
+Seqüenciamento de DNA
+
+Conhecer as cadeias do DNA permite muitas análises biológicas.
+Seqüenciamento de DNA são técnicas que permitem obter a
+seqüenciar de moléculas de DNA.
+A técnica mais antiga é de Sanger, 1977.
+
+Montagem de fragmentos de DNA
+
+Guilherme P. Telles
+
+4 / 59
+
+Seqüenciamento de DNA
+A limitação mais importante é que só é possı́vel obter a cadeia de
+trechos de DNA de até 1000 bases.
+
+Montagem de fragmentos de DNA
+
+Guilherme P. Telles
+
+5 / 59
+
+Seqüenciamento de DNA
+A limitação mais importante é que só é possı́vel obter a cadeia de
+trechos de DNA de até 1000 bases.
+Para seqüenciar uma molécula longa de DNA ela é replicada e as
+cópias são quebradas em fragmentos, que são seqüenciados.
+
+Montagem de fragmentos de DNA
+
+Guilherme P. Telles
+
+5 / 59
+
+Seqüenciamento de DNA
+A limitação mais importante é que só é possı́vel obter a cadeia de
+trechos de DNA de até 1000 bases.
+Para seqüenciar uma molécula longa de DNA ela é replicada e as
+cópias são quebradas em fragmentos, que são seqüenciados.
+O problema computacional é reconstruir a molécula original com base
+nas sobreposições entre os fragmentos.
+
+Montagem de fragmentos de DNA
+
+Guilherme P. Telles
+
+5 / 59
+
+Seqüenciamento de DNA
+A limitação mais importante é que só é possı́vel obter a cadeia de
+trechos de DNA de até 1000 bases.
+Para seqüenciar uma molécula longa de DNA ela é replicada e as
+cópias são quebradas em fragmentos, que são seqüenciados.
+O problema computacional é reconstruir a molécula original com base
+nas sobreposições entre os fragmentos.
+Fragmentos seqüenciados também são chamados de reads.
+
+Montagem de fragmentos de DNA
+
+Guilherme P. Telles
+
+5 / 59
+
+Seqüenciamento de DNA
+A limitação mais importante é que só é possı́vel obter a cadeia de
+trechos de DNA de até 1000 bases.
+Para seqüenciar uma molécula longa de DNA ela é replicada e as
+cópias são quebradas em fragmentos, que são seqüenciados.
+O problema computacional é reconstruir a molécula original com base
+nas sobreposições entre os fragmentos.
+Fragmentos seqüenciados também são chamados de reads.
+Podemos ter ou não uma estimativa do tamanho da molécula de
+DNA original.
+
+Montagem de fragmentos de DNA
+
+Guilherme P. Telles
+
+5 / 59
+
+Seqüenciamento de DNA
+A limitação mais importante é que só é possı́vel obter a cadeia de
+trechos de DNA de até 1000 bases.
+Para seqüenciar uma molécula longa de DNA ela é replicada e as
+cópias são quebradas em fragmentos, que são seqüenciados.
+O problema computacional é reconstruir a molécula original com base
+nas sobreposições entre os fragmentos.
+Fragmentos seqüenciados também são chamados de reads.
+Podemos ter ou não uma estimativa do tamanho da molécula de
+DNA original.
+Pode haver um read para cada ponta de um fragmento de DNA, do
+qual se tem uma estimativa de tamanho, formando um par-de-reads.
+
+Montagem de fragmentos de DNA
+
+Guilherme P. Telles
+
+5 / 59
+
+Tecnologias de seqüenciamento (mais usadas)
+Tecnologias mais recentes (pirosseqüenciamento) permitem produzir
+dezenas de milhares de cadeias por dia, a um custo mais baixo que na
+tecnologia anterior (Sanger).
+
+Montagem de fragmentos de DNA
+
+Guilherme P. Telles
+
+6 / 59
+
+Tecnologias de seqüenciamento (mais usadas)
+Tecnologias mais recentes (pirosseqüenciamento) permitem produzir
+dezenas de milhares de cadeias por dia, a um custo mais baixo que na
+tecnologia anterior (Sanger).
+Exigem muito menos intervenção humana.
+
+Montagem de fragmentos de DNA
+
+Guilherme P. Telles
+
+6 / 59
+
+Tecnologias de seqüenciamento (mais usadas)
+Tecnologias mais recentes (pirosseqüenciamento) permitem produzir
+dezenas de milhares de cadeias por dia, a um custo mais baixo que na
+tecnologia anterior (Sanger).
+Exigem muito menos intervenção humana.
+Números (2011):
+
+Montagem de fragmentos de DNA
+
+Guilherme P. Telles
+
+6 / 59
+
+Tecnologias de seqüenciamento (mais usadas)
+Tecnologias mais recentes (pirosseqüenciamento) permitem produzir
+dezenas de milhares de cadeias por dia, a um custo mais baixo que na
+tecnologia anterior (Sanger).
+Exigem muito menos intervenção humana.
+Números (2011):
+I Sanger: 60 kbp a cada 7h. Reads de até 1000 bp.
+
+Montagem de fragmentos de DNA
+
+Guilherme P. Telles
+
+6 / 59
+
+Tecnologias de seqüenciamento (mais usadas)
+Tecnologias mais recentes (pirosseqüenciamento) permitem produzir
+dezenas de milhares de cadeias por dia, a um custo mais baixo que na
+tecnologia anterior (Sanger).
+Exigem muito menos intervenção humana.
+Números (2011):
+I Sanger: 60 kbp a cada 7h. Reads de até 1000 bp.
+I 454: 1 Gbp a cada 24h. Reads de até 1000 bp.
+
+Montagem de fragmentos de DNA
+
+Guilherme P. Telles
+
+6 / 59
+
+Tecnologias de seqüenciamento (mais usadas)
+Tecnologias mais recentes (pirosseqüenciamento) permitem produzir
+dezenas de milhares de cadeias por dia, a um custo mais baixo que na
+tecnologia anterior (Sanger).
+Exigem muito menos intervenção humana.
+Números (2011):
+I Sanger: 60 kbp a cada 7h. Reads de até 1000 bp.
+I 454: 1 Gbp a cada 24h. Reads de até 1000 bp.
+I Illumina: 1.8 Gbp a cada 4 dias. Reads de até 300 bp.
+
+Montagem de fragmentos de DNA
+
+Guilherme P. Telles
+
+6 / 59
+
+Tecnologias de seqüenciamento (mais usadas)
+Tecnologias mais recentes (pirosseqüenciamento) permitem produzir
+dezenas de milhares de cadeias por dia, a um custo mais baixo que na
+tecnologia anterior (Sanger).
+Exigem muito menos intervenção humana.
+Números (2011):
+I Sanger: 60 kbp a cada 7h. Reads de até 1000 bp.
+I 454: 1 Gbp a cada 24h. Reads de até 1000 bp.
+I Illumina: 1.8 Gbp a cada 4 dias. Reads de até 300 bp.
+I SOLiD: 120 Gbp a cada 10 dias. Reads de 50 bp.
+
+Montagem de fragmentos de DNA
+
+Guilherme P. Telles
+
+6 / 59
+
+Tecnologias de seqüenciamento (mais usadas)
+Tecnologias mais recentes (pirosseqüenciamento) permitem produzir
+dezenas de milhares de cadeias por dia, a um custo mais baixo que na
+tecnologia anterior (Sanger).
+Exigem muito menos intervenção humana.
+Números (2011):
+I Sanger: 60 kbp a cada 7h. Reads de até 1000 bp.
+I 454: 1 Gbp a cada 24h. Reads de até 1000 bp.
+I Illumina: 1.8 Gbp a cada 4 dias. Reads de até 300 bp.
+I SOLiD: 120 Gbp a cada 10 dias. Reads de 50 bp.
+Além da cadeia de DNA, produzem uma indicação da precisão da
+leitura de cada letra, chamada de qualidade.
+
+Montagem de fragmentos de DNA
+
+Guilherme P. Telles
+
+6 / 59
+
+Tecnologias de seqüenciamento (mais usadas)
+Tecnologias mais recentes (pirosseqüenciamento) permitem produzir
+dezenas de milhares de cadeias por dia, a um custo mais baixo que na
+tecnologia anterior (Sanger).
+Exigem muito menos intervenção humana.
+Números (2011):
+I Sanger: 60 kbp a cada 7h. Reads de até 1000 bp.
+I 454: 1 Gbp a cada 24h. Reads de até 1000 bp.
+I Illumina: 1.8 Gbp a cada 4 dias. Reads de até 300 bp.
+I SOLiD: 120 Gbp a cada 10 dias. Reads de 50 bp.
+Além da cadeia de DNA, produzem uma indicação da precisão da
+leitura de cada letra, chamada de qualidade.
+Estão evoluindo rapidamente.
+
+Montagem de fragmentos de DNA
+
+Guilherme P. Telles
+
+6 / 59
+
+Estratégias principais
+
+Shotgun total: quebrar o DNA inteiro em fragmentos que podem ser
+seqüenciados diretamente.
+
+Montagem de fragmentos de DNA
+
+Guilherme P. Telles
+
+7 / 59
+
+Estratégias principais
+
+Shotgun total: quebrar o DNA inteiro em fragmentos que podem ser
+seqüenciados diretamente.
+Shotgun hierárquico: quebrar o DNA em pedaços ainda grandes
+(150kbp, BACs), selecionar um conjunto deles que cobre a molécula
+original e seqüenciar cada pedaço por shotgun total.
+
+Montagem de fragmentos de DNA
+
+Guilherme P. Telles
+
+7 / 59
+
+Estratégias principais
+
+Shotgun total: quebrar o DNA inteiro em fragmentos que podem ser
+seqüenciados diretamente.
+Shotgun hierárquico: quebrar o DNA em pedaços ainda grandes
+(150kbp, BACs), selecionar um conjunto deles que cobre a molécula
+original e seqüenciar cada pedaço por shotgun total.
+Deve haver redundância no seqüenciamento para que haja alta
+probabilidade de que toda a molécula seja coberta.
+
+Montagem de fragmentos de DNA
+
+Guilherme P. Telles
+
+7 / 59
+
+Problema computacional
+
+É conhecido como problema da montagem de fragmentos de DNA.
+
+Montagem de fragmentos de DNA
+
+Guilherme P. Telles
+
+8 / 59
+
+Problema computacional
+
+É conhecido como problema da montagem de fragmentos de DNA.
+Consiste em reconstruir a molécula original com base nas
+sobreposições entre os fragmentos.
+
+Montagem de fragmentos de DNA
+
+Guilherme P. Telles
+
+8 / 59
+
+Problema computacional
+
+É conhecido como problema da montagem de fragmentos de DNA.
+Consiste em reconstruir a molécula original com base nas
+sobreposições entre os fragmentos.
+A montagem produz uma organização das cadeias dos fragmentos,
+similar a um alinhamento múltiplo.
+
+Montagem de fragmentos de DNA
+
+Guilherme P. Telles
+
+8 / 59
+
+Problema computacional
+
+É conhecido como problema da montagem de fragmentos de DNA.
+Consiste em reconstruir a molécula original com base nas
+sobreposições entre os fragmentos.
+A montagem produz uma organização das cadeias dos fragmentos,
+similar a um alinhamento múltiplo.
+A resposta para o problema é uma cadeia-consenso ou apenas
+consenso, obtida por uma votação da maioria das letras em uma
+coluna.
+
+Montagem de fragmentos de DNA
+
+Guilherme P. Telles
+
+8 / 59
+
+Porque é difı́cil
+
+Os genomas são grandes.
+
+Montagem de fragmentos de DNA
+
+Guilherme P. Telles
+
+9 / 59
+
+Porque é difı́cil
+
+Os genomas são grandes.
+Os genomas têm repetições.
+
+Montagem de fragmentos de DNA
+
+Guilherme P. Telles
+
+9 / 59
+
+Porque é difı́cil
+
+Os genomas são grandes.
+Os genomas têm repetições.
+O seqüenciamento não é perfeito.
+
+Montagem de fragmentos de DNA
+
+Guilherme P. Telles
+
+9 / 59
+
+Porque é difı́cil
+
+Os genomas são grandes.
+Os genomas têm repetições.
+O seqüenciamento não é perfeito.
+A quantidade de reads é muito grande.
+
+Montagem de fragmentos de DNA
+
+Guilherme P. Telles
+
+9 / 59
+
+Experimento de shotgun ideal
+
+Todas as regiões da molécula de interesse estão cobertas por
+fragmentos.
+
+Montagem de fragmentos de DNA
+
+Guilherme P. Telles
+
+10 / 59
+
+Experimento de shotgun ideal
+
+Todas as regiões da molécula de interesse estão cobertas por
+fragmentos.
+Todos os fragmentos são seqüenciados com exatidão.
+
+Montagem de fragmentos de DNA
+
+Guilherme P. Telles
+
+10 / 59
+
+Experimento de shotgun ideal
+
+Todas as regiões da molécula de interesse estão cobertas por
+fragmentos.
+Todos os fragmentos são seqüenciados com exatidão.
+Cada fragmento tem sobreposição com outros.
+
+Montagem de fragmentos de DNA
+
+Guilherme P. Telles
+
+10 / 59
+
+Experimento de shotgun ideal
+
+Todas as regiões da molécula de interesse estão cobertas por
+fragmentos.
+Todos os fragmentos são seqüenciados com exatidão.
+Cada fragmento tem sobreposição com outros.
+Temos uma
+
+Montagem de fragmentos de DNA
+
+Guilherme P. Telles
+
+10 / 59
+
+Erros de seqüenciamento
+
+O seqüenciamento de de cada fragmento pode não ser exato.
+
+Montagem de fragmentos de DNA
+
+Guilherme P. Telles
+
+11 / 59
+
+Erros de seqüenciamento
+
+O seqüenciamento de de cada fragmento pode não ser exato.
+Cada tecnologia é susceptı́vel a certos tipos de erros, que podem ser
+inserções, remoções e substituições de bases.
+
+Montagem de fragmentos de DNA
+
+Guilherme P. Telles
+
+11 / 59
+
+Erros de seqüenciamento
+
+O seqüenciamento de de cada fragmento pode não ser exato.
+Cada tecnologia é susceptı́vel a certos tipos de erros, que podem ser
+inserções, remoções e substituições de bases.
+Para Sanger, de 1 a 5% concentrados nas extremidades,
+principalmente 30 .
+
+Montagem de fragmentos de DNA
+
+Guilherme P. Telles
+
+11 / 59
+
+Erros de seqüenciamento
+
+O seqüenciamento de de cada fragmento pode não ser exato.
+Cada tecnologia é susceptı́vel a certos tipos de erros, que podem ser
+inserções, remoções e substituições de bases.
+Para Sanger, de 1 a 5% concentrados nas extremidades,
+principalmente 30 .
+Para piroseqüenciamento, menor que 1% (pesquisa preliminar).
+
+Montagem de fragmentos de DNA
+
+Guilherme P. Telles
+
+11 / 59
+
+Quimeras
+
+Partes não consecutivas do DNA se juntam e formam um fragmento
+falso.
+
+Montagem de fragmentos de DNA
+
+Guilherme P. Telles
+
+12 / 59
+
+Falta de cobertura
+
+Uma ou mais regiões do DNA não são cobertas por nenhum
+fragmento.
+
+Montagem de fragmentos de DNA
+
+Guilherme P. Telles
+
+13 / 59
+
+Falta de cobertura
+
+Uma ou mais regiões do DNA não são cobertas por nenhum
+fragmento.
+Acontece por limitações da técnica de seqüenciamento para um
+trecho da molécula com uma composição especı́fica de bases.
+
+Montagem de fragmentos de DNA
+
+Guilherme P. Telles
+
+13 / 59
+
+Repetições
+
+É comum que existam regiões que se repetem exatamente ou com
+grande similaridade.
+
+Montagem de fragmentos de DNA
+
+Guilherme P. Telles
+
+14 / 59
+
+Repetições
+
+É comum que existam regiões que se repetem exatamente ou com
+grande similaridade.
+Se a similaridade é grande as diferenças são tomadas por erros de
+seqüenciamento.
+
+Montagem de fragmentos de DNA
+
+Guilherme P. Telles
+
+14 / 59
+
+Repetições
+
+É comum que existam regiões que se repetem exatamente ou com
+grande similaridade.
+Se a similaridade é grande as diferenças são tomadas por erros de
+seqüenciamento.
+Repetições cobertas totalmente por um read não são um problema.
+
+Montagem de fragmentos de DNA
+
+Guilherme P. Telles
+
+14 / 59
+
+Repetições
+
+É comum que existam regiões que se repetem exatamente ou com
+grande similaridade.
+Se a similaridade é grande as diferenças são tomadas por erros de
+seqüenciamento.
+Repetições cobertas totalmente por um read não são um problema.
+Repetições podem ser grandes ou pequenas com um grande número
+de cópias.
+
+Montagem de fragmentos de DNA
+
+Guilherme P. Telles
+
+14 / 59
+
+Repetições
+
+[Setubal e Meidanis, 1996]
+
+Montagem de fragmentos de DNA
+
+Guilherme P. Telles
+
+15 / 59
+
+Repetições
+
+[Setubal e Meidanis, 1996]
+
+Montagem de fragmentos de DNA
+
+Guilherme P. Telles
+
+16 / 59
+
+Repetições
+
+[Setubal e Meidanis, 1996]
+
+Montagem de fragmentos de DNA
+
+Guilherme P. Telles
+
+17 / 59
+
+Orientação desconhecida
+Os fragmentos são seqüenciados de 50 para 30 mas não sabemos de
+que fita eles vieram.
+--------=====---->
+<---||||||-----------=====-------->
+<------||||||--------||||##===---->
+<--------------------------------->
+<---||||##===-----
+
+Montagem de fragmentos de DNA
+
+Guilherme P. Telles
+
+18 / 59
+
+Orientação desconhecida
+Os fragmentos são seqüenciados de 50 para 30 mas não sabemos de
+que fita eles vieram.
+--------=====---->
+<---||||||-----------=====-------->
+<------||||||--------||||##===---->
+<--------------------------------->
+<---||||##===----Temos uma indicação da qualidade de cada base.
+Montagem de fragmentos de DNA
+
+Guilherme P. Telles
+
+18 / 59
+
+Modelos
+
+Vamos olhar para algumas formas em que o problema já foi
+formulado.
+
+Montagem de fragmentos de DNA
+
+Guilherme P. Telles
+
+19 / 59
+
+Modelos
+
+Vamos olhar para algumas formas em que o problema já foi
+formulado.
+Na maioria dos modelos vamos considerar montagem mais
+parcimoniosa, isto é, que a molécula mais curta é a melhor resposta.
+
+Montagem de fragmentos de DNA
+
+Guilherme P. Telles
+
+19 / 59
+
+Cobertura e contigs
+Para n reads com tamanho médio t originados de uma cadeia de
+tamanho T e montados com sobreposição mı́nima o, a cobertura
+média é
+c=
+
+nt
+.
+T
+
+Montagem de fragmentos de DNA
+
+Guilherme P. Telles
+
+20 / 59
+
+Cobertura e contigs
+Para n reads com tamanho médio t originados de uma cadeia de
+tamanho T e montados com sobreposição mı́nima o, a cobertura
+média é
+c=
+
+nt
+.
+T
+
+A montagem pode resultar em mais de um subconjunto de cadeias.
+Cada subconjunto é chamado de contig. O número esperado de
+contigs é
+p = ne
+
+−n(t−o)
+T
+
+Montagem de fragmentos de DNA
+
+.
+
+Guilherme P. Telles
+
+20 / 59
+
+Cobertura e contigs
+Para n reads com tamanho médio t originados de uma cadeia de
+tamanho T e montados com sobreposição mı́nima o, a cobertura
+média é
+c=
+
+nt
+.
+T
+
+A montagem pode resultar em mais de um subconjunto de cadeias.
+Cada subconjunto é chamado de contig. O número esperado de
+contigs é
+p = ne
+
+−n(t−o)
+T
+
+.
+
+O número esperado de contigs com pelo menos dois reads é
+p0 = ne
+
+−n(t−o)
+T
+
+Montagem de fragmentos de DNA
+
+− ne
+
+−2n(t−o)
+T
+
+.
+
+Guilherme P. Telles
+
+20 / 59
+
+Consenso
+
+A seqüência consenso ou consenso para um alinhamento de cadeias
+em uma montagem é obtida tomando a maioria em cada coluna.
+
+Montagem de fragmentos de DNA
+
+Guilherme P. Telles
+
+21 / 59
+
+Notação
+
+O complemento-reverso de uma cadeia de DNA s é s.
+
+Montagem de fragmentos de DNA
+
+Guilherme P. Telles
+
+22 / 59
+
+Notação
+
+O complemento-reverso de uma cadeia de DNA s é s.
+Dizemos que duas cadeias si e sj têm sobreposição (sufixo-prefixo) se
+si [q, |si |] = sj [1, p]. O tamanho de uma sobreposição é ovl (si , sj ).
+
+Montagem de fragmentos de DNA
+
+Guilherme P. Telles
+
+22 / 59
+
+Super-cadeia comum mais curta - SCS
+
+A idéia é encontrar uma cadeia de tamanho mı́nimo que contenha os
+reads como subcadeia supondo que
+
+Montagem de fragmentos de DNA
+
+Guilherme P. Telles
+
+23 / 59
+
+Super-cadeia comum mais curta - SCS
+
+A idéia é encontrar uma cadeia de tamanho mı́nimo que contenha os
+reads como subcadeia supondo que
+I Os reads têm orientação conhecida.
+
+Montagem de fragmentos de DNA
+
+Guilherme P. Telles
+
+23 / 59
+
+Super-cadeia comum mais curta - SCS
+
+A idéia é encontrar uma cadeia de tamanho mı́nimo que contenha os
+reads como subcadeia supondo que
+I Os reads têm orientação conhecida.
+I Os reads não têm erros de seqüenciamento.
+
+Montagem de fragmentos de DNA
+
+Guilherme P. Telles
+
+23 / 59
+
+Super-cadeia comum mais curta - SCS
+
+A idéia é encontrar uma cadeia de tamanho mı́nimo que contenha os
+reads como subcadeia supondo que
+I Os reads têm orientação conhecida.
+I Os reads não têm erros de seqüenciamento.
+Dado um conjunto de cadeias S = {s1 , . . . , sk }, o problema da
+super-cadeia comum mais curta é encontrar a menor cadeia C que
+seja super-cadeia de toda cadeia em S.
+
+Montagem de fragmentos de DNA
+
+Guilherme P. Telles
+
+23 / 59
+
+Super-cadeia comum mais curta - SCS
+
+A idéia é encontrar uma cadeia de tamanho mı́nimo que contenha os
+reads como subcadeia supondo que
+I Os reads têm orientação conhecida.
+I Os reads não têm erros de seqüenciamento.
+Dado um conjunto de cadeias S = {s1 , . . . , sk }, o problema da
+super-cadeia comum mais curta é encontrar a menor cadeia C que
+seja super-cadeia de toda cadeia em S.
+É NP-difı́cil. Existem aproximações.
+
+Montagem de fragmentos de DNA
+
+Guilherme P. Telles
+
+23 / 59
+
+Super-cadeia comum mais curta
+
+Mesmo com a suposição de seqüenciamento perfeito e orientação
+conhecida, repetições levam a uma super-cadeia mais curta, que vai
+ser preferida.
+
+Montagem de fragmentos de DNA
+
+Guilherme P. Telles
+
+24 / 59
+
+Super-cadeia comum mais curta
+
+Montagem de fragmentos de DNA
+
+Guilherme P. Telles
+
+25 / 59
+
+Super-cadeia comum mais curta
+
+[Setubal e Meidanis, 1996]
+
+Montagem de fragmentos de DNA
+
+Guilherme P. Telles
+
+25 / 59
+
+Reconstrução
+
+A idéia é encontrar uma cadeia de tamanho mı́nimo C tal que todo
+read ou o complemento reverso dele seja subcadeia de C com erro
+limitado por ε.
+
+Montagem de fragmentos de DNA
+
+Guilherme P. Telles
+
+26 / 59
+
+Reconstrução
+
+Seja ds (s, t) a distância de edição entre duas cadeias s e t que não
+penaliza espaços nas extremidades de t.
+
+Montagem de fragmentos de DNA
+
+Guilherme P. Telles
+
+27 / 59
+
+Reconstrução
+
+Seja ds (s, t) a distância de edição entre duas cadeias s e t que não
+penaliza espaços nas extremidades de t.
+Formalmente
+ds (s, t) = min {ed(s, x)},
+x∈SC (t)
+
+onde SC (t) é o conjunto de todas as subcadeias de t e ed(·, ·) é a
+distância de edição entre duas cadeias.
+
+Montagem de fragmentos de DNA
+
+Guilherme P. Telles
+
+27 / 59
+
+Reconstrução
+
+Seja ds (s, t) a distância de edição entre duas cadeias s e t que não
+penaliza espaços nas extremidades de t.
+Formalmente
+ds (s, t) = min {ed(s, x)},
+x∈SC (t)
+
+onde SC (t) é o conjunto de todas as subcadeias de t e ed(·, ·) é a
+distância de edição entre duas cadeias.
+ds pode ser calculada usando PD semi-global com pontuação 1 para
+espaço ou mismatch e 0 para match.
+
+Montagem de fragmentos de DNA
+
+Guilherme P. Telles
+
+27 / 59
+
+Reconstrução
+
+Dado um conjunto de cadeias S e um real ε ∈ [0, 1], o problema da
+reconstrução é encontrar uma menor cadeia C tal que para todo
+s ∈ S tenhamos
+min{ds (s, C), ds (s, C)} ≤ ε|s|.
+
+Montagem de fragmentos de DNA
+
+Guilherme P. Telles
+
+28 / 59
+
+Reconstrução
+
+Dado um conjunto de cadeias S e um real ε ∈ [0, 1], o problema da
+reconstrução é encontrar uma menor cadeia C tal que para todo
+s ∈ S tenhamos
+min{ds (s, C), ds (s, C)} ≤ ε|s|.
+ε é a tolerância de erro.
+
+Montagem de fragmentos de DNA
+
+Guilherme P. Telles
+
+28 / 59
+
+Reconstrução
+
+Dado um conjunto de cadeias S e um real ε ∈ [0, 1], o problema da
+reconstrução é encontrar uma menor cadeia C tal que para todo
+s ∈ S tenhamos
+min{ds (s, C), ds (s, C)} ≤ ε|s|.
+ε é a tolerância de erro.
+A super-cadeia comum mais curta é um caso particular da
+reconstrução, quando ε = 0.
+
+Montagem de fragmentos de DNA
+
+Guilherme P. Telles
+
+28 / 59
+
+Reconstrução
+
+É NP-difı́cil.
+
+Montagem de fragmentos de DNA
+
+Guilherme P. Telles
+
+29 / 59
+
+Reconstrução
+
+É NP-difı́cil.
+Inclui erros e orientação mas não modela repeats, falta de cobertura
+ou o tamanho da molécula original.
+
+Montagem de fragmentos de DNA
+
+Guilherme P. Telles
+
+29 / 59
+
+Multicontig
+
+A idéia é permitir a formação de vários contigs, exigindo que haja
+uma boa ligação entre os fragmentos.
+
+Montagem de fragmentos de DNA
+
+Guilherme P. Telles
+
+30 / 59
+
+Multicontig
+
+Dados um conjunto de cadeias S = {s1 , . . . , sk }, um inteiro t e um
+real ε ∈ [0, 1], o problema multicontig é particionar S em
+{B1 , . . . , Bl } e encontrar a menor cadeia Ci para cada Bi tal que
+
+Montagem de fragmentos de DNA
+
+Guilherme P. Telles
+
+31 / 59
+
+Multicontig
+
+Dados um conjunto de cadeias S = {s1 , . . . , sk }, um inteiro t e um
+real ε ∈ [0, 1], o problema multicontig é particionar S em
+{B1 , . . . , Bl } e encontrar a menor cadeia Ci para cada Bi tal que
+I
+
+para todo f ∈ Bi , ou f ou f é subcadeia de Ci ,
+
+Montagem de fragmentos de DNA
+
+Guilherme P. Telles
+
+31 / 59
+
+Multicontig
+
+Dados um conjunto de cadeias S = {s1 , . . . , sk }, um inteiro t e um
+real ε ∈ [0, 1], o problema multicontig é particionar S em
+{B1 , . . . , Bl } e encontrar a menor cadeia Ci para cada Bi tal que
+I
+I
+
+para todo f ∈ Bi , ou f ou f é subcadeia de Ci ,
+em Ci toda sobreposição entre duas cadeias x e y de Bi não
+contida em outra cadeia w de Bi tem tamanho pelo menos t.
+
+Montagem de fragmentos de DNA
+
+Guilherme P. Telles
+
+31 / 59
+
+Multicontig
+
+Dados um conjunto de cadeias S = {s1 , . . . , sk }, um inteiro t e um
+real ε ∈ [0, 1], o problema multicontig é particionar S em
+{B1 , . . . , Bl } e encontrar a menor cadeia Ci para cada Bi tal que
+I
+I
+
+para todo f ∈ Bi , ou f ou f é subcadeia de Ci ,
+em Ci toda sobreposição entre duas cadeias x e y de Bi não
+contida em outra cadeia w de Bi tem tamanho pelo menos t.
+
+t define o tamanho da sobreposição mı́nima não contida entre dois
+reads.
+
+Montagem de fragmentos de DNA
+
+Guilherme P. Telles
+
+31 / 59
+
+Multicontig
+
+Dados um conjunto de cadeias S = {s1 , . . . , sk }, um inteiro t e um
+real ε ∈ [0, 1], o problema multicontig é particionar S em
+{B1 , . . . , Bl } e encontrar a menor cadeia Ci para cada Bi tal que
+I
+I
+
+para todo f ∈ Bi , ou f ou f é subcadeia de Ci ,
+em Ci toda sobreposição entre duas cadeias x e y de Bi não
+contida em outra cadeia w de Bi tem tamanho pelo menos t.
+
+t define o tamanho da sobreposição mı́nima não contida entre dois
+reads.
+NP-difı́cil.
+
+Montagem de fragmentos de DNA
+
+Guilherme P. Telles
+
+31 / 59
+
+Multicontig com erros
+
+Seja f um fragmento e sejam `(f ) e r(f ) as colunas mais à esquerda
+e mais à direita de f no alinhamento.
+
+Montagem de fragmentos de DNA
+
+Guilherme P. Telles
+
+32 / 59
+
+Multicontig com erros
+
+Seja f um fragmento e sejam `(f ) e r(f ) as colunas mais à esquerda
+e mais à direita de f no alinhamento.
+A imagem de f sobre o consenso C do alinhamento é C[`(f ), r(f )].
+
+Montagem de fragmentos de DNA
+
+Guilherme P. Telles
+
+32 / 59
+
+Multicontig com erros
+
+Dados um conjunto de cadeias S = {s1 , . . . , sk }, um inteiro t e um
+real ε ∈ [0, 1], o problema multicontig é particionar S em
+{B1 , . . . , Bl } e encontrar a menor cadeia Ci para cada Bi tal que
+
+Montagem de fragmentos de DNA
+
+Guilherme P. Telles
+
+33 / 59
+
+Multicontig com erros
+
+Dados um conjunto de cadeias S = {s1 , . . . , sk }, um inteiro t e um
+real ε ∈ [0, 1], o problema multicontig é particionar S em
+{B1 , . . . , Bl } e encontrar a menor cadeia Ci para cada Bi tal que
+I
+
+para todo f ∈ Bi , ou f ou f é subcadeia de Ci ,
+
+Montagem de fragmentos de DNA
+
+Guilherme P. Telles
+
+33 / 59
+
+Multicontig com erros
+
+Dados um conjunto de cadeias S = {s1 , . . . , sk }, um inteiro t e um
+real ε ∈ [0, 1], o problema multicontig é particionar S em
+{B1 , . . . , Bl } e encontrar a menor cadeia Ci para cada Bi tal que
+I
+I
+
+para todo f ∈ Bi , ou f ou f é subcadeia de Ci ,
+em Ci toda sobreposição entre duas cadeias x e y de Bi não
+contida em outra cadeia w de Bi tem tamanho pelo menos t e
+
+Montagem de fragmentos de DNA
+
+Guilherme P. Telles
+
+33 / 59
+
+Multicontig com erros
+
+Dados um conjunto de cadeias S = {s1 , . . . , sk }, um inteiro t e um
+real ε ∈ [0, 1], o problema multicontig é particionar S em
+{B1 , . . . , Bl } e encontrar a menor cadeia Ci para cada Bi tal que
+I
+I
+
+I
+
+para todo f ∈ Bi , ou f ou f é subcadeia de Ci ,
+em Ci toda sobreposição entre duas cadeias x e y de Bi não
+contida em outra cadeia w de Bi tem tamanho pelo menos t e
+para todo fragmento f ed(f, Ci [`(f ), r(f )]) ≤ ε|s|.
+
+Montagem de fragmentos de DNA
+
+Guilherme P. Telles
+
+33 / 59
+
+Multicontig com erros
+
+Dados um conjunto de cadeias S = {s1 , . . . , sk }, um inteiro t e um
+real ε ∈ [0, 1], o problema multicontig é particionar S em
+{B1 , . . . , Bl } e encontrar a menor cadeia Ci para cada Bi tal que
+I
+I
+
+I
+
+para todo f ∈ Bi , ou f ou f é subcadeia de Ci ,
+em Ci toda sobreposição entre duas cadeias x e y de Bi não
+contida em outra cadeia w de Bi tem tamanho pelo menos t e
+para todo fragmento f ed(f, Ci [`(f ), r(f )]) ≤ ε|s|.
+
+t define o tamanho da sobreposição mı́nima não contida e ε é a
+tolerância de erro no alinhamento entre um fragmento e o consenso.
+
+Montagem de fragmentos de DNA
+
+Guilherme P. Telles
+
+33 / 59
+
+Multicontig com erros
+
+Dados um conjunto de cadeias S = {s1 , . . . , sk }, um inteiro t e um
+real ε ∈ [0, 1], o problema multicontig é particionar S em
+{B1 , . . . , Bl } e encontrar a menor cadeia Ci para cada Bi tal que
+I
+I
+
+I
+
+para todo f ∈ Bi , ou f ou f é subcadeia de Ci ,
+em Ci toda sobreposição entre duas cadeias x e y de Bi não
+contida em outra cadeia w de Bi tem tamanho pelo menos t e
+para todo fragmento f ed(f, Ci [`(f ), r(f )]) ≤ ε|s|.
+
+t define o tamanho da sobreposição mı́nima não contida e ε é a
+tolerância de erro no alinhamento entre um fragmento e o consenso.
+NP-difı́cil.
+
+Montagem de fragmentos de DNA
+
+Guilherme P. Telles
+
+33 / 59
+
+Caminhos
+
+Um caminho Hamiltoniano em um grafo é um caminho que passa em
+cada vértice exatamente uma vez.
+
+Montagem de fragmentos de DNA
+
+Guilherme P. Telles
+
+34 / 59
+
+Caminhos
+
+Um caminho Hamiltoniano em um grafo é um caminho que passa em
+cada vértice exatamente uma vez.
+Um caminho Euleriano em um grafo é um caminho que passa em
+cada aresta exatamente uma vez.
+
+Montagem de fragmentos de DNA
+
+Guilherme P. Telles
+
+34 / 59
+
+Caminhos
+
+Um caminho Hamiltoniano em um grafo é um caminho que passa em
+cada vértice exatamente uma vez.
+Um caminho Euleriano em um grafo é um caminho que passa em
+cada aresta exatamente uma vez.
+Um caminho chinês em um grafo é um caminho que passa em cada
+aresta pelo menos uma vez.
+
+Montagem de fragmentos de DNA
+
+Guilherme P. Telles
+
+34 / 59
+
+Grafo de sobreposições
+
+Dois fragmentos x e y se sobrepõem se existir uma cadeia não-vazia z
+de tamanho maximal que é sufixo de x e prefixo de y.
+
+Montagem de fragmentos de DNA
+
+Guilherme P. Telles
+
+35 / 59
+
+Grafo de sobreposições
+
+Dois fragmentos x e y se sobrepõem se existir uma cadeia não-vazia z
+de tamanho maximal que é sufixo de x e prefixo de y.
+Um grafo de sobreposições H para um conjunto de cadeias
+S = {s1 , . . . , sk } é um grafo orientado completo e com pesos
+
+Montagem de fragmentos de DNA
+
+Guilherme P. Telles
+
+35 / 59
+
+Grafo de sobreposições
+
+Dois fragmentos x e y se sobrepõem se existir uma cadeia não-vazia z
+de tamanho maximal que é sufixo de x e prefixo de y.
+Um grafo de sobreposições H para um conjunto de cadeias
+S = {s1 , . . . , sk } é um grafo orientado completo e com pesos
+I que tem um vértice para cada cadeia em S e
+
+Montagem de fragmentos de DNA
+
+Guilherme P. Telles
+
+35 / 59
+
+Grafo de sobreposições
+
+Dois fragmentos x e y se sobrepõem se existir uma cadeia não-vazia z
+de tamanho maximal que é sufixo de x e prefixo de y.
+Um grafo de sobreposições H para um conjunto de cadeias
+S = {s1 , . . . , sk } é um grafo orientado completo e com pesos
+I que tem um vértice para cada cadeia em S e
+I em que w(s , s ) = |s | − ovl (s , s ) para i 6= j.
+i j
+j
+i j
+
+Montagem de fragmentos de DNA
+
+Guilherme P. Telles
+
+35 / 59
+
+Grafo de sobreposições
+
+Dois fragmentos x e y se sobrepõem se existir uma cadeia não-vazia z
+de tamanho maximal que é sufixo de x e prefixo de y.
+Um grafo de sobreposições H para um conjunto de cadeias
+S = {s1 , . . . , sk } é um grafo orientado completo e com pesos
+I que tem um vértice para cada cadeia em S e
+I em que w(s , s ) = |s | − ovl (s , s ) para i 6= j.
+i j
+j
+i j
+Um caminho que passa por todos os vértices exatamente uma vez e
+tem custo mı́nimo corresponde a uma montagem mais curta dos
+fragmentos.
+
+Montagem de fragmentos de DNA
+
+Guilherme P. Telles
+
+35 / 59
+
+Grafo de sobreposições
+
+Dois fragmentos x e y se sobrepõem se existir uma cadeia não-vazia z
+de tamanho maximal que é sufixo de x e prefixo de y.
+Um grafo de sobreposições H para um conjunto de cadeias
+S = {s1 , . . . , sk } é um grafo orientado completo e com pesos
+I que tem um vértice para cada cadeia em S e
+I em que w(s , s ) = |s | − ovl (s , s ) para i 6= j.
+i j
+j
+i j
+Um caminho que passa por todos os vértices exatamente uma vez e
+tem custo mı́nimo corresponde a uma montagem mais curta dos
+fragmentos.
+Encontrar esse caminho é NP-difı́cil.
+
+Montagem de fragmentos de DNA
+
+Guilherme P. Telles
+
+35 / 59
+
+Grafo de Bruijn
+.
+P.A. Pevzner, H. Tang e M.S. Waterman, 2001.
+
+An Eulerian path approach to DNA fragment assembly. PNAS, 98, pág. 9748, 2001.
+Montagem de fragmentos de DNA
+
+Guilherme P. Telles
+
+36 / 59
+
+Grafo de Bruijn
+.
+P.A. Pevzner, H. Tang e M.S. Waterman, 2001.
+O espectro de um read é o conjunto de suas subcadeias de tamanho k
+(k-mers).
+
+An Eulerian path approach to DNA fragment assembly. PNAS, 98, pág. 9748, 2001.
+Montagem de fragmentos de DNA
+
+Guilherme P. Telles
+
+36 / 59
+
+Grafo de Bruijn
+.
+P.A. Pevzner, H. Tang e M.S. Waterman, 2001.
+O espectro de um read é o conjunto de suas subcadeias de tamanho k
+(k-mers).
+Para um conjunto de cadeias S = {s1 , . . . , sm }, um grafo de Bruijn
+Gk (S)
+
+An Eulerian path approach to DNA fragment assembly. PNAS, 98, pág. 9748, 2001.
+Montagem de fragmentos de DNA
+
+Guilherme P. Telles
+
+36 / 59
+
+Grafo de Bruijn
+.
+P.A. Pevzner, H. Tang e M.S. Waterman, 2001.
+O espectro de um read é o conjunto de suas subcadeias de tamanho k
+(k-mers).
+Para um conjunto de cadeias S = {s1 , . . . , sm }, um grafo de Bruijn
+Gk (S)
+I tem como vértices cada um dos k-mers na união dos espectros
+de {s1 , . . . , sm } e
+
+An Eulerian path approach to DNA fragment assembly. PNAS, 98, pág. 9748, 2001.
+Montagem de fragmentos de DNA
+
+Guilherme P. Telles
+
+36 / 59
+
+Grafo de Bruijn
+.
+P.A. Pevzner, H. Tang e M.S. Waterman, 2001.
+O espectro de um read é o conjunto de suas subcadeias de tamanho k
+(k-mers).
+Para um conjunto de cadeias S = {s1 , . . . , sm }, um grafo de Bruijn
+Gk (S)
+I tem como vértices cada um dos k-mers na união dos espectros
+de {s1 , . . . , sm } e
+I uma aresta (s[1, k], s[2, k + 1]) para cada subcadeia s de
+tamanho k + 1 em cada cadeia de S.
+
+An Eulerian path approach to DNA fragment assembly. PNAS, 98, pág. 9748, 2001.
+Montagem de fragmentos de DNA
+
+Guilherme P. Telles
+
+36 / 59
+
+Grafo de Bruijn
+
+Cada read si corresponde a um caminho
+p(si ) = s[1, k] → s[2, k + 1] → . . . → s[|si | − k + 1, |si |].
+
+Montagem de fragmentos de DNA
+
+Guilherme P. Telles
+
+37 / 59
+
+Grafo de Bruijn
+
+Cada read si corresponde a um caminho
+p(si ) = s[1, k] → s[2, k + 1] → . . . → s[|si | − k + 1, |si |].
+Um caminho é um super-caminho de Gk (S) se ele contém o caminho
+p(si ) para todo si em S.
+
+Montagem de fragmentos de DNA
+
+Guilherme P. Telles
+
+37 / 59
+
+Grafo de Bruijn
+
+Cada read si corresponde a um caminho
+p(si ) = s[1, k] → s[2, k + 1] → . . . → s[|si | − k + 1, |si |].
+Um caminho é um super-caminho de Gk (S) se ele contém o caminho
+p(si ) para todo si em S.
+Um super-caminho corresponde a uma montagem válida dos reads.
+
+Montagem de fragmentos de DNA
+
+Guilherme P. Telles
+
+37 / 59
+
+Grafo de Bruijn
+
+Cada read si corresponde a um caminho
+p(si ) = s[1, k] → s[2, k + 1] → . . . → s[|si | − k + 1, |si |].
+Um caminho é um super-caminho de Gk (S) se ele contém o caminho
+p(si ) para todo si em S.
+Um super-caminho corresponde a uma montagem válida dos reads.
+Uma montagem parcimoniosa é um super-caminho de tamanho
+mı́nimo em Gk (S).
+
+Montagem de fragmentos de DNA
+
+Guilherme P. Telles
+
+37 / 59
+
+Grafo de Bruijn
+
+Cada read si corresponde a um caminho
+p(si ) = s[1, k] → s[2, k + 1] → . . . → s[|si | − k + 1, |si |].
+Um caminho é um super-caminho de Gk (S) se ele contém o caminho
+p(si ) para todo si em S.
+Um super-caminho corresponde a uma montagem válida dos reads.
+Uma montagem parcimoniosa é um super-caminho de tamanho
+mı́nimo em Gk (S).
+Problema NP-difı́cil (super-caminho de Bruijn).
+
+Montagem de fragmentos de DNA
+
+Guilherme P. Telles
+
+37 / 59
+
+Grafo de Bruijn bi-orientado
+
+P. Medvedev et al..
+
+Computability of models for sequence assembly, WABI, pág. 289, 2007.
+Montagem de fragmentos de DNA
+
+Guilherme P. Telles
+
+38 / 59
+
+Grafo de Bruijn bi-orientado
+
+P. Medvedev et al..
+Uma k-molécula é um par de k-mers que são complementos reversos
+um do outro.
+
+Computability of models for sequence assembly, WABI, pág. 289, 2007.
+Montagem de fragmentos de DNA
+
+Guilherme P. Telles
+
+38 / 59
+
+Grafo de Bruijn bi-orientado
+
+P. Medvedev et al..
+Uma k-molécula é um par de k-mers que são complementos reversos
+um do outro.
+O k-espectro-molécula de uma molécula de DNA é o conjunto de
+todas as k-moléculas que correspondem aos k-mers do k-espectro de
+ambas as fitas do DNA.
+
+Computability of models for sequence assembly, WABI, pág. 289, 2007.
+Montagem de fragmentos de DNA
+
+Guilherme P. Telles
+
+38 / 59
+
+Grafo de Bruijn bi-orientado
+
+P. Medvedev et al..
+Uma k-molécula é um par de k-mers que são complementos reversos
+um do outro.
+O k-espectro-molécula de uma molécula de DNA é o conjunto de
+todas as k-moléculas que correspondem aos k-mers do k-espectro de
+ambas as fitas do DNA.
+Em toda k-molécula, um dos k-mers é rotulado + e o outro é
+rotulado −. Essa orientação é arbitrária mas uma k-molécula é
+sempre orientada da mesma forma.
+
+Computability of models for sequence assembly, WABI, pág. 289, 2007.
+Montagem de fragmentos de DNA
+
+Guilherme P. Telles
+
+38 / 59
+
+Grafo de Bruijn bi-orientado
+
+Um grafo de Bruijn bi-orientado Bk (S) para cadeias
+S = {s1 , . . . , sm } tem como vérices as k-moléculas na união de todos
+os k-espectro-moléculas das cadeias em S.
+
+Montagem de fragmentos de DNA
+
+Guilherme P. Telles
+
+39 / 59
+
+Grafo de Bruijn bi-orientado
+
+Um grafo de Bruijn bi-orientado Bk (S) para cadeias
+S = {s1 , . . . , sm } tem como vérices as k-moléculas na união de todos
+os k-espectro-moléculas das cadeias em S.
+Uma aresta representa uma (k + 1)-molécula e conecta duas
+k-moléculas que aparecem consecutivamente em alguma
+k-espectro-molécula para as cadeias em S.
+
+Montagem de fragmentos de DNA
+
+Guilherme P. Telles
+
+39 / 59
+
+Grafo de Bruijn bi-orientado
+
+Um grafo de Bruijn bi-orientado Bk (S) para cadeias
+S = {s1 , . . . , sm } tem como vérices as k-moléculas na união de todos
+os k-espectro-moléculas das cadeias em S.
+Uma aresta representa uma (k + 1)-molécula e conecta duas
+k-moléculas que aparecem consecutivamente em alguma
+k-espectro-molécula para as cadeias em S.
+Cada aresta tem duas orientações, que indicam qual orientação do
+k-mer foi considerada em cada vértice.
+
+Montagem de fragmentos de DNA
+
+Guilherme P. Telles
+
+39 / 59
+
+Grafo de Bruijn bi-orientado
+
+Se (x, y) é uma (k + 1)-molécula que corresponde a
+w[i, i + k − 1] e a w[i + 1, i + k] então
+
+Montagem de fragmentos de DNA
+
+Guilherme P. Telles
+
+40 / 59
+
+Grafo de Bruijn bi-orientado
+
+Se (x, y) é uma (k + 1)-molécula que corresponde a
+w[i, i + k − 1] e a w[i + 1, i + k] então
+I ela é positiva na incidência com x se w[i, i + k − 1] é positiva e é
+negativa caso contrário.
+
+Montagem de fragmentos de DNA
+
+Guilherme P. Telles
+
+40 / 59
+
+Grafo de Bruijn bi-orientado
+
+Se (x, y) é uma (k + 1)-molécula que corresponde a
+w[i, i + k − 1] e a w[i + 1, i + k] então
+I ela é positiva na incidência com x se w[i, i + k − 1] é positiva e é
+negativa caso contrário.
+I ela é positiva na incidência com y se w[i + 1, i + k] é positiva e é
+negativa caso contrário.
+
+Montagem de fragmentos de DNA
+
+Guilherme P. Telles
+
+40 / 59
+
+Grafo de Bruijn bi-orientado
+
+Se (x, y) é uma (k + 1)-molécula que corresponde a
+w[i, i + k − 1] e a w[i + 1, i + k] então
+I ela é positiva na incidência com x se w[i, i + k − 1] é positiva e é
+negativa caso contrário.
+I ela é positiva na incidência com y se w[i + 1, i + k] é positiva e é
+negativa caso contrário.
+Cada (k + 1)-mer e seu complemento são representados por
+exatamente uma aresta do grafo.
+
+Montagem de fragmentos de DNA
+
+Guilherme P. Telles
+
+40 / 59
+
+Grafo de Bruijn bi-orientado
+
+Cada montagem válida dos fragmentos corresponde a um caminho no
+grafo Bk (S).
+
+Montagem de fragmentos de DNA
+
+Guilherme P. Telles
+
+41 / 59
+
+Grafo de Bruijn bi-orientado
+
+Cada montagem válida dos fragmentos corresponde a um caminho no
+grafo Bk (S).
+Um caminho de tamanho mı́nimo que contém cada aresta pelo menos
+uma vez é uma solução parcimoniosa para a montagem.
+
+Montagem de fragmentos de DNA
+
+Guilherme P. Telles
+
+41 / 59
+
+Grafo de Bruijn bi-orientado
+
+Cada montagem válida dos fragmentos corresponde a um caminho no
+grafo Bk (S).
+Um caminho de tamanho mı́nimo que contém cada aresta pelo menos
+uma vez é uma solução parcimoniosa para a montagem.
+Esse problema é o do caminho chinês de custo mı́nimo e pode ser
+resolvido em tempo polinomial (lembre que esse é o caso sem erros.)
+
+Montagem de fragmentos de DNA
+
+Guilherme P. Telles
+
+41 / 59
+
+Grafo de cadeias
+
+Seja S um conjunto de cadeias em que nenhuma está contida em
+outra.
+
+E. Myers. The fragment assembly string graph, ECCB/JBI, pág. 85, 2005.
+Montagem de fragmentos de DNA
+
+Guilherme P. Telles
+
+42 / 59
+
+Grafo de cadeias
+
+Seja S um conjunto de cadeias em que nenhuma está contida em
+outra.
+Sejam x e y cadeias que se sobrepõem. Denotamos a sobreposição
+por x[bxy , exy ] = y[byx , eyx ].
+
+E. Myers. The fragment assembly string graph, ECCB/JBI, pág. 85, 2005.
+Montagem de fragmentos de DNA
+
+Guilherme P. Telles
+
+42 / 59
+
+Grafo de cadeias
+
+Seja S um conjunto de cadeias em que nenhuma está contida em
+outra.
+Sejam x e y cadeias que se sobrepõem. Denotamos a sobreposição
+por x[bxy , exy ] = y[byx , eyx ].
+O grafo de cadeias preliminar tem um vértice para cada cadeia de S.
+
+E. Myers. The fragment assembly string graph, ECCB/JBI, pág. 85, 2005.
+Montagem de fragmentos de DNA
+
+Guilherme P. Telles
+
+42 / 59
+
+Grafo de cadeias
+
+Seja S um conjunto de cadeias em que nenhuma está contida em
+outra.
+Sejam x e y cadeias que se sobrepõem. Denotamos a sobreposição
+por x[bxy , exy ] = y[byx , eyx ].
+O grafo de cadeias preliminar tem um vértice para cada cadeia de S.
+Para cada sobreposição entre x e y adicionamos uma aresta
+bi-direcionada (x, y).
+
+E. Myers. The fragment assembly string graph, ECCB/JBI, pág. 85, 2005.
+Montagem de fragmentos de DNA
+
+Guilherme P. Telles
+
+42 / 59
+
+Grafo de cadeias
+
+Cada aresta tem dois rótulos, um para cada parte não sobreposta dos
+reads.
+
+Montagem de fragmentos de DNA
+
+Guilherme P. Telles
+
+43 / 59
+
+Grafo de cadeias
+
+Cada aresta tem dois rótulos, um para cada parte não sobreposta dos
+reads.
+Cada aresta tem dois tipos, um para cada ponta.
+
+Montagem de fragmentos de DNA
+
+Guilherme P. Telles
+
+43 / 59
+
+Grafo de cadeias
+
+Cada aresta tem dois rótulos, um para cada parte não sobreposta dos
+reads.
+Cada aresta tem dois tipos, um para cada ponta.
+Cada aresta tem os dados (type xy , type yx , label xy , label yx ).
+
+Montagem de fragmentos de DNA
+
+Guilherme P. Telles
+
+43 / 59
+
+Grafo de cadeias
+
+type xy é igual a B se um prefixo de x se sobrepõe ou E se um sufixo
+de x se sobrepõe:
+
+B se bxy = 1
+type xy =
+E se exy = |x|
+
+Montagem de fragmentos de DNA
+
+Guilherme P. Telles
+
+44 / 59
+
+Grafo de cadeias
+
+type xy é igual a B se um prefixo de x se sobrepõe ou E se um sufixo
+de x se sobrepõe:
+
+B se bxy = 1
+type xy =
+E se exy = |x|
+type yx é igual a B se um prefixo de y se sobrepõe ou E se um sufixo
+de y se sobrepõe:
+
+B se byx = 1
+type yx =
+E se eyx = |y|
+
+Montagem de fragmentos de DNA
+
+Guilherme P. Telles
+
+44 / 59
+
+Grafo de cadeias
+label xy é igual à parte não sobreposta de y:
+
+y[eyx + 1, |y|] se byx = 1
+label xy =
+y[1, byx − 1]
+se eyx = |y|
+
+Montagem de fragmentos de DNA
+
+Guilherme P. Telles
+
+45 / 59
+
+Grafo de cadeias
+label xy é igual à parte não sobreposta de y:
+
+y[eyx + 1, |y|] se byx = 1
+label xy =
+y[1, byx − 1]
+se eyx = |y|
+label yx é igual à parte não sobreposta de x:
+
+x[exy + 1, |x|] se bxy = 1
+label yx =
+y[1, bxy − 1]
+se exy = |x|
+
+Montagem de fragmentos de DNA
+
+Guilherme P. Telles
+
+45 / 59
+
+Grafo de cadeias
+label xy é igual à parte não sobreposta de y:
+
+y[eyx + 1, |y|] se byx = 1
+label xy =
+y[1, byx − 1]
+se eyx = |y|
+label yx é igual à parte não sobreposta de x:
+
+x[exy + 1, |x|] se bxy = 1
+label yx =
+y[1, bxy − 1]
+se exy = |x|
+Se a sobreposição entre x e y é complementar reversa, digamos
+x[bxy , exy ] = y[byx , eyx ], então label xy e label yx são complementares
+reversos também.
+
+Montagem de fragmentos de DNA
+
+Guilherme P. Telles
+
+45 / 59
+
+Grafo de cadeias
+label xy é igual à parte não sobreposta de y:
+
+y[eyx + 1, |y|] se byx = 1
+label xy =
+y[1, byx − 1]
+se eyx = |y|
+label yx é igual à parte não sobreposta de x:
+
+x[exy + 1, |x|] se bxy = 1
+label yx =
+y[1, bxy − 1]
+se exy = |x|
+Se a sobreposição entre x e y é complementar reversa, digamos
+x[bxy , exy ] = y[byx , eyx ], então label xy e label yx são complementares
+reversos também.
+Uma aresta que representa uma sobreposição complementar reversa
+tem suas duas orientações do mesmo tipo.
+
+Montagem de fragmentos de DNA
+
+Guilherme P. Telles
+
+45 / 59
+
+Grafo de cadeias
+
+Sejam cadeias x, y e z que se sobrepõem duas-a-duas.
+
+Montagem de fragmentos de DNA
+
+Guilherme P. Telles
+
+46 / 59
+
+Grafo de cadeias
+
+Sejam cadeias x, y e z que se sobrepõem duas-a-duas.
+Se y e z se sobrepõem com a mesma ponta de z (type xy = type xz )
+então existe um caminho que contém as três cadeias em sucessão.
+
+Montagem de fragmentos de DNA
+
+Guilherme P. Telles
+
+46 / 59
+
+Grafo de cadeias
+
+Sejam cadeias x, y e z que se sobrepõem duas-a-duas.
+Se y e z se sobrepõem com a mesma ponta de z (type xy = type xz )
+então existe um caminho que contém as três cadeias em sucessão.
+Digamos que esse caminho seja x → y → z.
+
+Montagem de fragmentos de DNA
+
+Guilherme P. Telles
+
+46 / 59
+
+Grafo de cadeias
+
+Sejam cadeias x, y e z que se sobrepõem duas-a-duas.
+Se y e z se sobrepõem com a mesma ponta de z (type xy = type xz )
+então existe um caminho que contém as três cadeias em sucessão.
+Digamos que esse caminho seja x → y → z.
+Então a aresta (x, z) é transitiva e pode ser removida do grafo sem
+perda de informação.
+
+Montagem de fragmentos de DNA
+
+Guilherme P. Telles
+
+46 / 59
+
+Grafo de cadeias
+
+Sejam cadeias x, y e z que se sobrepõem duas-a-duas.
+Se y e z se sobrepõem com a mesma ponta de z (type xy = type xz )
+então existe um caminho que contém as três cadeias em sucessão.
+Digamos que esse caminho seja x → y → z.
+Então a aresta (x, z) é transitiva e pode ser removida do grafo sem
+perda de informação.
+O grafo de cadeias é um subgrafo sem arestas transitivas maximal do
+grafo de cadeias preliminar.
+
+Montagem de fragmentos de DNA
+
+Guilherme P. Telles
+
+46 / 59
+
+Grafo de cadeias
+
+Além disso cada aresta do grafo é classificada (estatisticamente) como
+
+Montagem de fragmentos de DNA
+
+Guilherme P. Telles
+
+47 / 59
+
+Grafo de cadeias
+
+Além disso cada aresta do grafo é classificada (estatisticamente) como
+obrigatória se deve aparecer pelo menos uma vez em um caminho.
+
+Montagem de fragmentos de DNA
+
+Guilherme P. Telles
+
+47 / 59
+
+Grafo de cadeias
+
+Além disso cada aresta do grafo é classificada (estatisticamente) como
+obrigatória se deve aparecer pelo menos uma vez em um caminho.
+exata se deve aparecer exatamente uma vez em um caminho.
+
+Montagem de fragmentos de DNA
+
+Guilherme P. Telles
+
+47 / 59
+
+Grafo de cadeias
+
+Além disso cada aresta do grafo é classificada (estatisticamente) como
+obrigatória se deve aparecer pelo menos uma vez em um caminho.
+exata se deve aparecer exatamente uma vez em um caminho.
+opcional se pode aparecer um número qualquer de vezes em um
+caminho.
+
+Montagem de fragmentos de DNA
+
+Guilherme P. Telles
+
+47 / 59
+
+Grafo de cadeias
+A concatenação de x e label xy é uma montagem de x e y.
+
+Montagem de fragmentos de DNA
+
+Guilherme P. Telles
+
+48 / 59
+
+Grafo de cadeias
+A concatenação de x e label xy é uma montagem de x e y.
+Um caminho nesse grafo é válido se entra em um vértice por uma
+orientção do tipo B e sai por uma do tipo E ou vice-versa.
+
+Montagem de fragmentos de DNA
+
+Guilherme P. Telles
+
+48 / 59
+
+Grafo de cadeias
+A concatenação de x e label xy é uma montagem de x e y.
+Um caminho nesse grafo é válido se entra em um vértice por uma
+orientção do tipo B e sai por uma do tipo E ou vice-versa.
+Um caminho cı́clico no grafo de cadeias que respeita as restrições de
+seleção da classificação representa uma montagem válida do genoma.
+
+Montagem de fragmentos de DNA
+
+Guilherme P. Telles
+
+48 / 59
+
+Grafo de cadeias
+A concatenação de x e label xy é uma montagem de x e y.
+Um caminho nesse grafo é válido se entra em um vértice por uma
+orientção do tipo B e sai por uma do tipo E ou vice-versa.
+Um caminho cı́clico no grafo de cadeias que respeita as restrições de
+seleção da classificação representa uma montagem válida do genoma.
+Seja s uma função de seleção das arestas de I em {obrigatória, exata,
+opcional}.
+
+Montagem de fragmentos de DNA
+
+Guilherme P. Telles
+
+48 / 59
+
+Grafo de cadeias
+A concatenação de x e label xy é uma montagem de x e y.
+Um caminho nesse grafo é válido se entra em um vértice por uma
+orientção do tipo B e sai por uma do tipo E ou vice-versa.
+Um caminho cı́clico no grafo de cadeias que respeita as restrições de
+seleção da classificação representa uma montagem válida do genoma.
+Seja s uma função de seleção das arestas de I em {obrigatória, exata,
+opcional}.
+Um s-path é um caminho em I que contém todas as arestas
+obrigatórias pelo menos uma vez, todas as arestas exatas uma vez e
+todas as arestas opcionais um número qualquer de vezes.
+
+Montagem de fragmentos de DNA
+
+Guilherme P. Telles
+
+48 / 59
+
+Grafo de cadeias
+A concatenação de x e label xy é uma montagem de x e y.
+Um caminho nesse grafo é válido se entra em um vértice por uma
+orientção do tipo B e sai por uma do tipo E ou vice-versa.
+Um caminho cı́clico no grafo de cadeias que respeita as restrições de
+seleção da classificação representa uma montagem válida do genoma.
+Seja s uma função de seleção das arestas de I em {obrigatória, exata,
+opcional}.
+Um s-path é um caminho em I que contém todas as arestas
+obrigatórias pelo menos uma vez, todas as arestas exatas uma vez e
+todas as arestas opcionais um número qualquer de vezes.
+O problema de encontrar um s-path cı́clico de peso mı́nimo em um
+grafo orientado com pesos e função de seleção s é NP-difı́cil.
+
+Montagem de fragmentos de DNA
+
+Guilherme P. Telles
+
+48 / 59
+
+Sobre a classificação prática
+
+Depois da eliminação de transitividades o autor propõe a redução de
+seqüências com vértices com grau de entrada e saı́da igual a 1 por
+uma única aresta.
+
+Montagem de fragmentos de DNA
+
+Guilherme P. Telles
+
+49 / 59
+
+Sobre a classificação prática
+
+Depois da eliminação de transitividades o autor propõe a redução de
+seqüências com vértices com grau de entrada e saı́da igual a 1 por
+uma única aresta.
+Arestas exatas são arestas com uma grande probabilidade de
+representarem uma região coberta apenas por aquela aresta. As
+contas são feitas a partir de uma estimativa do tamanho de genoma e
+da aresta.
+
+Montagem de fragmentos de DNA
+
+Guilherme P. Telles
+
+49 / 59
+
+Sobre a classificação prática
+
+Depois da eliminação de transitividades o autor propõe a redução de
+seqüências com vértices com grau de entrada e saı́da igual a 1 por
+uma única aresta.
+Arestas exatas são arestas com uma grande probabilidade de
+representarem uma região coberta apenas por aquela aresta. As
+contas são feitas a partir de uma estimativa do tamanho de genoma e
+da aresta.
+Arestas obrigatórias são as que restaram e têm um vértice interior.
+
+Montagem de fragmentos de DNA
+
+Guilherme P. Telles
+
+49 / 59
+
+Sobre a classificação prática
+
+Depois da eliminação de transitividades o autor propõe a redução de
+seqüências com vértices com grau de entrada e saı́da igual a 1 por
+uma única aresta.
+Arestas exatas são arestas com uma grande probabilidade de
+representarem uma região coberta apenas por aquela aresta. As
+contas são feitas a partir de uma estimativa do tamanho de genoma e
+da aresta.
+Arestas obrigatórias são as que restaram e têm um vértice interior.
+As que não têm um vértice interior são opcionais.
+
+Montagem de fragmentos de DNA
+
+Guilherme P. Telles
+
+49 / 59
+
+Heurı́sticas
+Grandes classes de heurı́sticas:
+
+Montagem de fragmentos de DNA
+
+Guilherme P. Telles
+
+50 / 59
+
+Heurı́sticas
+Grandes classes de heurı́sticas:
+I Gulosas.
+
+Montagem de fragmentos de DNA
+
+Guilherme P. Telles
+
+50 / 59
+
+Heurı́sticas
+Grandes classes de heurı́sticas:
+I Gulosas.
+I Baseadas em grafo de sobreposições.
+
+Montagem de fragmentos de DNA
+
+Guilherme P. Telles
+
+50 / 59
+
+Heurı́sticas
+Grandes classes de heurı́sticas:
+I Gulosas.
+I Baseadas em grafo de sobreposições.
+I Baseadas em grafo de cadeias.
+
+Montagem de fragmentos de DNA
+
+Guilherme P. Telles
+
+50 / 59
+
+Heurı́sticas
+Grandes classes de heurı́sticas:
+I Gulosas.
+I Baseadas em grafo de sobreposições.
+I Baseadas em grafo de cadeias.
+I Baseadas em grafo de Bruijn.
+
+Montagem de fragmentos de DNA
+
+Guilherme P. Telles
+
+50 / 59
+
+Heurı́sticas
+Grandes classes de heurı́sticas:
+I Gulosas.
+I Baseadas em grafo de sobreposições.
+I Baseadas em grafo de cadeias.
+I Baseadas em grafo de Bruijn.
+As três primeiras incluem uma primeira fase de comparação dos reads
+para encontrar sobreposições sufixo-prefixo.
+
+Montagem de fragmentos de DNA
+
+Guilherme P. Telles
+
+50 / 59
+
+Heurı́sticas
+Grandes classes de heurı́sticas:
+I Gulosas.
+I Baseadas em grafo de sobreposições.
+I Baseadas em grafo de cadeias.
+I Baseadas em grafo de Bruijn.
+As três primeiras incluem uma primeira fase de comparação dos reads
+para encontrar sobreposições sufixo-prefixo.
+I Normalmente acelerada usando assinaturas.
+
+Montagem de fragmentos de DNA
+
+Guilherme P. Telles
+
+50 / 59
+
+Heurı́sticas
+Grandes classes de heurı́sticas:
+I Gulosas.
+I Baseadas em grafo de sobreposições.
+I Baseadas em grafo de cadeias.
+I Baseadas em grafo de Bruijn.
+As três primeiras incluem uma primeira fase de comparação dos reads
+para encontrar sobreposições sufixo-prefixo.
+I Normalmente acelerada usando assinaturas.
+I Trivialmente paralelizável.
+
+Montagem de fragmentos de DNA
+
+Guilherme P. Telles
+
+50 / 59
+
+Heurı́sticas
+Grandes classes de heurı́sticas:
+I Gulosas.
+I Baseadas em grafo de sobreposições.
+I Baseadas em grafo de cadeias.
+I Baseadas em grafo de Bruijn.
+As três primeiras incluem uma primeira fase de comparação dos reads
+para encontrar sobreposições sufixo-prefixo.
+I Normalmente acelerada usando assinaturas.
+I Trivialmente paralelizável.
+Normalmente incluem uma estratégia de ‘limpeza’ dos dados para
+remoção de erros que podem ser identificados previamente.
+
+Montagem de fragmentos de DNA
+
+Guilherme P. Telles
+
+50 / 59
+
+Heurı́sticas
+Grandes classes de heurı́sticas:
+I Gulosas.
+I Baseadas em grafo de sobreposições.
+I Baseadas em grafo de cadeias.
+I Baseadas em grafo de Bruijn.
+As três primeiras incluem uma primeira fase de comparação dos reads
+para encontrar sobreposições sufixo-prefixo.
+I Normalmente acelerada usando assinaturas.
+I Trivialmente paralelizável.
+Normalmente incluem uma estratégia de ‘limpeza’ dos dados para
+remoção de erros que podem ser identificados previamente.
+Normalmente incluem alguma estratégia para lidar com
+pares-de-reads.
+
+Montagem de fragmentos de DNA
+
+Guilherme P. Telles
+
+50 / 59
+
+Gulosa
+
+Estratégia:
+
+Montagem de fragmentos de DNA
+
+Guilherme P. Telles
+
+51 / 59
+
+Gulosa
+
+Estratégia:
+I Definir alguma medida M para avaliar sobreposições entre reads
+e entre contigs.
+
+Montagem de fragmentos de DNA
+
+Guilherme P. Telles
+
+51 / 59
+
+Gulosa
+
+Estratégia:
+I Definir alguma medida M para avaliar sobreposições entre reads
+e entre contigs.
+I Agrupar o par de reads e/ou contigs com o maior M , enquanto
+houver algum par com M maior que um limiar mı́nimo.
+
+Montagem de fragmentos de DNA
+
+Guilherme P. Telles
+
+51 / 59
+
+Gulosa
+
+Estratégia:
+I Definir alguma medida M para avaliar sobreposições entre reads
+e entre contigs.
+I Agrupar o par de reads e/ou contigs com o maior M , enquanto
+houver algum par com M maior que um limiar mı́nimo.
+I Construir um consenso para cada contig por uma votação entre
+os reads no contig.
+
+Montagem de fragmentos de DNA
+
+Guilherme P. Telles
+
+51 / 59
+
+Gulosa
+
+Estratégia:
+I Definir alguma medida M para avaliar sobreposições entre reads
+e entre contigs.
+I Agrupar o par de reads e/ou contigs com o maior M , enquanto
+houver algum par com M maior que um limiar mı́nimo.
+I Construir um consenso para cada contig por uma votação entre
+os reads no contig.
+Phrap, TIGR assembler, CAP3.
+
+Montagem de fragmentos de DNA
+
+Guilherme P. Telles
+
+51 / 59
+
+Divergência
+
+Ocorre divergência quando um read A tem sobreposição com B e C,
+mas B e C não têm sobreposição.
+
+Montagem de fragmentos de DNA
+
+Guilherme P. Telles
+
+52 / 59
+
+Divergência
+
+Ocorre divergência quando um read A tem sobreposição com B e C,
+mas B e C não têm sobreposição.
+Acontece nas fronteiras de regiões repetidas ou por causa de erros de
+seqüenciamento.
+
+Montagem de fragmentos de DNA
+
+Guilherme P. Telles
+
+52 / 59
+
+Outra gulosa
+
+Estratégia:
+
+Montagem de fragmentos de DNA
+
+Guilherme P. Telles
+
+53 / 59
+
+Outra gulosa
+
+Estratégia:
+I Definir algum critério para avaliar sobreposições entre reads.
+Pode considerar tamanho da sobreposição, qualidade das bases,
+número de seqüências que confirmam a sobreposição etc.
+
+Montagem de fragmentos de DNA
+
+Guilherme P. Telles
+
+53 / 59
+
+Outra gulosa
+
+Estratégia:
+I Definir algum critério para avaliar sobreposições entre reads.
+Pode considerar tamanho da sobreposição, qualidade das bases,
+número de seqüências que confirmam a sobreposição etc.
+I Selecionar um read para começar um contig.
+
+Montagem de fragmentos de DNA
+
+Guilherme P. Telles
+
+53 / 59
+
+Outra gulosa
+
+Estratégia:
+I Definir algum critério para avaliar sobreposições entre reads.
+Pode considerar tamanho da sobreposição, qualidade das bases,
+número de seqüências que confirmam a sobreposição etc.
+I Selecionar um read para começar um contig.
+I Estender o contig na extremidade 3’ até que ocorra divergência.
+
+Montagem de fragmentos de DNA
+
+Guilherme P. Telles
+
+53 / 59
+
+Outra gulosa
+
+Estratégia:
+I Definir algum critério para avaliar sobreposições entre reads.
+Pode considerar tamanho da sobreposição, qualidade das bases,
+número de seqüências que confirmam a sobreposição etc.
+I Selecionar um read para começar um contig.
+I Estender o contig na extremidade 3’ até que ocorra divergência.
+I Estender o contig na extremidade 5’ até que ocorra divergência.
+
+Montagem de fragmentos de DNA
+
+Guilherme P. Telles
+
+53 / 59
+
+Outra gulosa
+
+Estratégia:
+I Definir algum critério para avaliar sobreposições entre reads.
+Pode considerar tamanho da sobreposição, qualidade das bases,
+número de seqüências que confirmam a sobreposição etc.
+I Selecionar um read para começar um contig.
+I Estender o contig na extremidade 3’ até que ocorra divergência.
+I Estender o contig na extremidade 5’ até que ocorra divergência.
+I Construir um consenso para cada contig.
+
+Montagem de fragmentos de DNA
+
+Guilherme P. Telles
+
+53 / 59
+
+Outra gulosa
+
+Estratégia:
+I Definir algum critério para avaliar sobreposições entre reads.
+Pode considerar tamanho da sobreposição, qualidade das bases,
+número de seqüências que confirmam a sobreposição etc.
+I Selecionar um read para começar um contig.
+I Estender o contig na extremidade 3’ até que ocorra divergência.
+I Estender o contig na extremidade 5’ até que ocorra divergência.
+I Construir um consenso para cada contig.
+SSAKE,VCAKE,SHARCGS.
+
+Montagem de fragmentos de DNA
+
+Guilherme P. Telles
+
+53 / 59
+
+Grafo de sobreposições, de cadeias e de Bruijn
+
+Estratégia:
+
+Montagem de fragmentos de DNA
+
+Guilherme P. Telles
+
+54 / 59
+
+Grafo de sobreposições, de cadeias e de Bruijn
+
+Estratégia:
+I Construir um grafo de sobreposições.
+
+Montagem de fragmentos de DNA
+
+Guilherme P. Telles
+
+54 / 59
+
+Grafo de sobreposições, de cadeias e de Bruijn
+
+Estratégia:
+I Construir um grafo de sobreposições.
+I Identificar caminhos que correspondem a regiões do genoma.
+
+Montagem de fragmentos de DNA
+
+Guilherme P. Telles
+
+54 / 59
+
+Grafo de sobreposições, de cadeias e de Bruijn
+
+Estratégia:
+I Construir um grafo de sobreposições.
+I Identificar caminhos que correspondem a regiões do genoma.
+I Construir consenso.
+
+Montagem de fragmentos de DNA
+
+Guilherme P. Telles
+
+54 / 59
+
+Grafo de sobreposições, de cadeias e de Bruijn
+
+Estratégia:
+I Construir um grafo de sobreposições.
+I Identificar caminhos que correspondem a regiões do genoma.
+I Construir consenso.
+Sobreposições: Celera assembler, Arachne, Edena.
+
+Montagem de fragmentos de DNA
+
+Guilherme P. Telles
+
+54 / 59
+
+Grafo de sobreposições, de cadeias e de Bruijn
+
+Estratégia:
+I Construir um grafo de sobreposições.
+I Identificar caminhos que correspondem a regiões do genoma.
+I Construir consenso.
+Sobreposições: Celera assembler, Arachne, Edena.
+Cadeias: Euler.
+
+Montagem de fragmentos de DNA
+
+Guilherme P. Telles
+
+54 / 59
+
+Grafo de sobreposições, de cadeias e de Bruijn
+
+Estratégia:
+I Construir um grafo de sobreposições.
+I Identificar caminhos que correspondem a regiões do genoma.
+I Construir consenso.
+Sobreposições: Celera assembler, Arachne, Edena.
+Cadeias: Euler.
+de Bruijn: Velvet, Allpaths.
+
+Montagem de fragmentos de DNA
+
+Guilherme P. Telles
+
+54 / 59
+
+Scaffolding
+
+As estratégias de montagem normalmente produzem vários contigs.
+
+Montagem de fragmentos de DNA
+
+Guilherme P. Telles
+
+55 / 59
+
+Scaffolding
+
+As estratégias de montagem normalmente produzem vários contigs.
+I Um contig é uma cadeia na qual a ordem das letras foi
+determinada com alta confiabilidade.
+
+Montagem de fragmentos de DNA
+
+Guilherme P. Telles
+
+55 / 59
+
+Scaffolding
+
+As estratégias de montagem normalmente produzem vários contigs.
+I Um contig é uma cadeia na qual a ordem das letras foi
+determinada com alta confiabilidade.
+Scaffolding é uma forma de reconstruir um DNA usando informação
+dos pares-de-reads para determinar a ordem relativa de contigs.
+
+Montagem de fragmentos de DNA
+
+Guilherme P. Telles
+
+55 / 59
+
+Scaffolding
+
+As estratégias de montagem normalmente produzem vários contigs.
+I Um contig é uma cadeia na qual a ordem das letras foi
+determinada com alta confiabilidade.
+Scaffolding é uma forma de reconstruir um DNA usando informação
+dos pares-de-reads para determinar a ordem relativa de contigs.
+Um scaffold (andaime) é composto por contigs e buracos.
+
+Montagem de fragmentos de DNA
+
+Guilherme P. Telles
+
+55 / 59
+
+Scaffolding
+
+As estratégias de montagem normalmente produzem vários contigs.
+I Um contig é uma cadeia na qual a ordem das letras foi
+determinada com alta confiabilidade.
+Scaffolding é uma forma de reconstruir um DNA usando informação
+dos pares-de-reads para determinar a ordem relativa de contigs.
+Um scaffold (andaime) é composto por contigs e buracos.
+Um buraco é definido por pelo menos um par-de-reads com um read
+em um contig e o outro em um contig diferente. O tamanho do
+buraco pode ser estimado.
+
+Montagem de fragmentos de DNA
+
+Guilherme P. Telles
+
+55 / 59
+
+Scaffolding
+
+Nem sempre é possı́vel obter um único scaffold para os contigs.
+
+Montagem de fragmentos de DNA
+
+Guilherme P. Telles
+
+56 / 59
+
+Scaffolding
+
+Nem sempre é possı́vel obter um único scaffold para os contigs.
+Scaffolds podem se sobrepor, por exemplo quando representam alelos.
+
+Montagem de fragmentos de DNA
+
+Guilherme P. Telles
+
+56 / 59
+
+Scaffolding
+
+Nem sempre é possı́vel obter um único scaffold para os contigs.
+Scaffolds podem se sobrepor, por exemplo quando representam alelos.
+A ordem relativa dos scaffolds ao longo da molécula não é conhecida.
+
+Montagem de fragmentos de DNA
+
+Guilherme P. Telles
+
+56 / 59
+
+Scaffolding
+
+Nem sempre é possı́vel obter um único scaffold para os contigs.
+Scaffolds podem se sobrepor, por exemplo quando representam alelos.
+A ordem relativa dos scaffolds ao longo da molécula não é conhecida.
+Quase todos os montadores fazem scaffolding.
+
+Montagem de fragmentos de DNA
+
+Guilherme P. Telles
+
+56 / 59
+
+Scaffolding
+
+Nem sempre é possı́vel obter um único scaffold para os contigs.
+Scaffolds podem se sobrepor, por exemplo quando representam alelos.
+A ordem relativa dos scaffolds ao longo da molécula não é conhecida.
+Quase todos os montadores fazem scaffolding.
+A estratégia tı́pica para determinar os scaffolds é gulosa, incorporando
+informação por ordem de confiabilidade até que haja um conflito.
+
+Montagem de fragmentos de DNA
+
+Guilherme P. Telles
+
+56 / 59
+
+Scaffolding
+
+Nem sempre é possı́vel obter um único scaffold para os contigs.
+Scaffolds podem se sobrepor, por exemplo quando representam alelos.
+A ordem relativa dos scaffolds ao longo da molécula não é conhecida.
+Quase todos os montadores fazem scaffolding.
+A estratégia tı́pica para determinar os scaffolds é gulosa, incorporando
+informação por ordem de confiabilidade até que haja um conflito.
+Outras estratégias incluem informação de mapas fı́sicos de DNA. Um
+mapa fı́sico indica a posição relativa de marcadores moleculares bem
+definidos ao longo do DNA.
+
+Montagem de fragmentos de DNA
+
+Guilherme P. Telles
+
+56 / 59
+
+Validação
+
+Vários montadores incluem estratégias de validação das montagens.
+
+Montagem de fragmentos de DNA
+
+Guilherme P. Telles
+
+57 / 59
+
+Validação
+
+Vários montadores incluem estratégias de validação das montagens.
+Estratégias de validação incluem:
+
+Montagem de fragmentos de DNA
+
+Guilherme P. Telles
+
+57 / 59
+
+Validação
+
+Vários montadores incluem estratégias de validação das montagens.
+Estratégias de validação incluem:
+I Análises de consistência com base nas colunas do consenso.
+
+Montagem de fragmentos de DNA
+
+Guilherme P. Telles
+
+57 / 59
+
+Validação
+
+Vários montadores incluem estratégias de validação das montagens.
+Estratégias de validação incluem:
+I Análises de consistência com base nas colunas do consenso.
+I Uso de pares de reads para analisar a consistência dos contigs.
+
+Montagem de fragmentos de DNA
+
+Guilherme P. Telles
+
+57 / 59
+
+Validação
+
+Vários montadores incluem estratégias de validação das montagens.
+Estratégias de validação incluem:
+I Análises de consistência com base nas colunas do consenso.
+I Uso de pares de reads para analisar a consistência dos contigs.
+I Avaliação da distribuição dos reads ao longo da molécula para
+identificar repetições.
+
+Montagem de fragmentos de DNA
+
+Guilherme P. Telles
+
+57 / 59
+
+Validação
+
+Vários montadores incluem estratégias de validação das montagens.
+Estratégias de validação incluem:
+I Análises de consistência com base nas colunas do consenso.
+I Uso de pares de reads para analisar a consistência dos contigs.
+I Avaliação da distribuição dos reads ao longo da molécula para
+identificar repetições.
+I Uso de mapas fı́sicos para analisar a consistência dos contigs.
+
+Montagem de fragmentos de DNA
+
+Guilherme P. Telles
+
+57 / 59
+
+Seqüência consenso
+
+Freqüentemente há interesse em produzir uma seqüência que
+represente o alinhamento múltiplo.
+
+Montagem de fragmentos de DNA
+
+Guilherme P. Telles
+
+58 / 59
+
+Seqüência consenso
+
+Freqüentemente há interesse em produzir uma seqüência que
+represente o alinhamento múltiplo.
+Para cada coluna i do alinhamento o caractere-consenso é o caractere
+do alfabeto que maximiza a soma da pontuação para todos os
+caracteres da coluna.
+
+Montagem de fragmentos de DNA
+
+Guilherme P. Telles
+
+58 / 59
+
+Seqüência consenso
+
+Freqüentemente há interesse em produzir uma seqüência que
+represente o alinhamento múltiplo.
+Para cada coluna i do alinhamento o caractere-consenso é o caractere
+do alfabeto que maximiza a soma da pontuação para todos os
+caracteres da coluna.
+A cadeia consenso é a concatenação dos caracteres-consenso para
+todas as colunas do alinhamento.
+
+Montagem de fragmentos de DNA
+
+Guilherme P. Telles
+
+58 / 59
+
+Seqüência consenso
+
+Freqüentemente há interesse em produzir uma seqüência que
+represente o alinhamento múltiplo.
+Para cada coluna i do alinhamento o caractere-consenso é o caractere
+do alfabeto que maximiza a soma da pontuação para todos os
+caracteres da coluna.
+A cadeia consenso é a concatenação dos caracteres-consenso para
+todas as colunas do alinhamento.
+A maioria é possı́vel, mas não é considerada muito interessante.
+
+Montagem de fragmentos de DNA
+
+Guilherme P. Telles
+
+58 / 59
+
+Seqüência consenso
+
+O problema do alinhamento múltiplo pode ser redefinido em termos
+da seqüência consenso. Seja s(i) a pontuação do caracter-consenso.
+
+Montagem de fragmentos de DNA
+
+Guilherme P. Telles
+
+59 / 59
+
+Seqüência consenso
+
+O problema do alinhamento múltiplo pode ser redefinido em termos
+da seqüência consenso. Seja s(i) a pontuação do caracter-consenso.
+O alinhamento múltiplo ótimo de P
+consenso ótimo é o alinhamento
+múltiplo para o qual o somatório i s(i) é máximo.
+
+Montagem de fragmentos de DNA
+
+Guilherme P. Telles
+
+59 / 59
+
+
